@@ -1,9 +1,9 @@
 from rest_framework.filters import BaseFilterBackend
 
 from django.db.models import Case, Q, Value, When
+from datetime import date, datetime
 
 from backend.consultas.models import Consulta
-from datetime import date, datetime
 from backend.consultas.validators import Validators
 
 
