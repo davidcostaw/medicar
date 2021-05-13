@@ -19,6 +19,10 @@
 
 	python manage.py createsuperuser
 
-### ✅ Executar o comando para rodar a aplicação
+### 5️⃣ Executar o comando para rodar a aplicação
 
 	python manage.py runserver
+
+### ✅ Acessar a aplicação
+
+	http://127.0.0.1:8000/admin/
