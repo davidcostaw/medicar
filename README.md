@@ -19,6 +19,6 @@
 
 	python manage.py createsuperuser
 
-### ✔️ Executar o comando para rodar a aplicação
+### ✅ Executar o comando para rodar a aplicação
 
 	python manage.py runserver
