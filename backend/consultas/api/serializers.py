@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .validators import Validators
+from backend.consultas.validators import Validators
 
 from backend.agendas.models import Agenda
 from backend.consultas.models import Consulta

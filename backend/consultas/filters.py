@@ -4,7 +4,7 @@ from django.db.models import Case, Q, Value, When
 
 from backend.consultas.models import Consulta
 from datetime import date, datetime
-from .validators import Validators
+from backend.consultas.validators import Validators
 
 
 class ConsultaFilter(BaseFilterBackend):

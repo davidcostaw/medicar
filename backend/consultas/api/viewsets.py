@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from backend.consultas.models import Consulta
 from .serializers import ConsultaSerializer
 
-from .filters import ConsultaFilter
+from backend.consultas.filters import ConsultaFilter
 
 
 class ConsultaViewSet(viewsets.ModelViewSet):
