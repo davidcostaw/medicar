@@ -1,4 +1,4 @@
 .gitignore
-venv
-*.sqlite3
 .idea
+*.sqlite3
+venv

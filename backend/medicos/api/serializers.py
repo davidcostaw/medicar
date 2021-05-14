@@ -5,7 +5,7 @@ from backend.especialidades.api.serializers import EspecialidadeSerializer
 
 
 class MedicoSerializer(serializers.ModelSerializer):
-    especialidade = EspecialidadeSerializer()
+    especialidade = EspecialidadeSerializer(many=False)
 
     class Meta:
         model = Medico

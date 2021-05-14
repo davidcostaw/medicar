@@ -27,7 +27,7 @@ class AgendaQuerySet(models.QuerySet):
         )
 
         return self.prefetch_related(
-            Prefetch('horarios', queryset=horarios_disponiveis)
+            Prefetch('horarios', queryset=horarios_disponiveis, to_attr='horarios_disponiveis')
         )
 
 
