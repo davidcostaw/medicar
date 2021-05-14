@@ -9,5 +9,5 @@ from .serializers import MedicoSerializer
 class MedicoViewSet(viewsets.ModelViewSet):
     queryset = Medico.objects.all()
     serializer_class = MedicoSerializer
-    filter_class = MedicoFilter
-    filterset_fields = ['nome', 'especialidade']
+    filter_backends = [SearchFilter, MedicoFilter]
+    search_fields = ['nome']

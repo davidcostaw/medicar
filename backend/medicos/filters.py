@@ -1,20 +1,10 @@
-import django_filters
-
-from .models import Especialidade
-from backend.medicos.models import Medico
+from rest_framework.filters import BaseFilterBackend
 
 
-class MedicoFilter(django_filters.FilterSet):
-    especialidade = django_filters.filters.ModelMultipleChoiceFilter(
-        queryset=Especialidade.objects.all()
-    )
+class MedicoFilter(BaseFilterBackend):
+    def filter_queryset(self, request, queryset, view):
+        especialidades = request.query_params.getlist('especialidade')
 
-    nome = django_filters.filters.CharFilter(
-        lookup_expr='icontains'
-    )
-
-    class Meta:
-        model = Medico
-        fields = [
-            'nome', 'especialidade'
-        ]
+        if especialidades:
+            return queryset.filter(especialidade__id__in=especialidades)
+        return queryset
