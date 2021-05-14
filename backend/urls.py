@@ -23,14 +23,14 @@ from backend.especialidades.api.viewsets import EspecialidadeViewSet
 from backend.medicos.api.viewsets import MedicoViewSet
 from backend.agendas.api.viewsets import AgendaViewSet
 from backend.consultas.api.viewsets import ConsultaViewSet
-from backend.auth.api.viewsets import CreateUserViewSet
+from backend.auth.api.viewsets import CriarUsuarioViewSet
 
 router = routers.DefaultRouter()
 router.register(r'especialidades', EspecialidadeViewSet)
 router.register(r'medicos', MedicoViewSet)
 router.register(r'agendas', AgendaViewSet)
 router.register(r'consultas', ConsultaViewSet)
-router.register(r'registrar', CreateUserViewSet)
+router.register(r'registrar', CriarUsuarioViewSet)
 
 
 urlpatterns = [
